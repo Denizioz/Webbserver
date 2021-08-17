@@ -1,0 +1,30 @@
+doctype html 
+html(lang="en")
+  head 
+    title Bokindex 
+    style 
+      include ../public/style.css
+  body 
+    table.indexlist
+      tr
+        th.listheader ISBN13 
+        th.listheader Titel
+        th.listheader Författare
+        th.listheader Pris 
+      each book in data   
+        tr.hovershadow
+          td.listvalue
+            a(href="/book/" + book.ISBN13) #{book.ISBN13}
+          td.listvalue
+            a(href="/book/" + book.ISBN13) #{book.Titel}
+          td.listvalue
+            a(href="/book/" + book.ISBN13) #{book.Förnamn + " " + book.Efternamn}
+          td.listvalue
+            a(href="/book/" + book.ISBN13) #{book.Pris + "kr"}
+
+    script(src='https://code.jquery.com/jquery-3.2.1.min.js'
+           integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
+           crossorigin='anonymous')
+           
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'
+           integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous')

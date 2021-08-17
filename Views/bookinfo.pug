@@ -1,0 +1,19 @@
+doctype html 
+html(lang="en")
+  head 
+    title Bokinfo
+    style 
+      include ../public/style.css
+  body.background
+    div.background
+      h1 #{singleData.Titel}
+      img(src="https://pictures.abebooks.com/isbn/" + singleData.ISBN13 + "-us.jpg", alt="Bild på bok")
+      h2 #{singleData.Förnamn + " " + singleData.Efternamn}
+      h3 #{singleData.Namn}
+      h3 #{singleData.Språk}
+      h3 #{singleData.Pris + "kr"}
+      each value in ButiksData
+        h4 #{value.Namn}: #{value.Antal}st 
+
+      form(action="http://localhost:3000/") 
+        input(type="submit" value="Tillbaka")
