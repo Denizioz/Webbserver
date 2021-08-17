@@ -1,1 +1,5 @@
-Importera databasen till din lokala server så borde det fungera att bara starta.
+Importera databasen till din lokala server så borde det fungera att bara starta med node.
+
+Ifall den ber om lösenord eller liknande ska det vara Labb3 som både användarnamn och lösenord.
+
+//Deniz Holm
